@@ -98,7 +98,7 @@ energy_in_layers = EnergyInCaloLayers("energyInLayers",
                                       # calibrated cells
                                       # do not split the following line on multiple lines or it will break scripts
                                       # that update the values of the corrections
-                                      samplingFractions = [0.3775596654349802] * 1 + [0.13400227700041234] * 1 + [0.14390509963164044] * 1 + [0.14998482026270935] * 1 + [0.15457673722531148] * 1 + [0.15928098152159675] * 1 + [0.1635367867767212] * 1 + [0.16801070646031507] * 1 + [0.1713409944779989] * 1 + [0.17580195406064622] * 1 + [0.17966699467772812] * 1,
+                                      samplingFractions = [0.3816106371465399] * 1 + [0.13606027272993534] * 1 + [0.14440377278980568] * 1 + [0.1498462792215245] * 1 + [0.15488829608278676] * 1 + [0.1592259999853961] * 1 + [0.1642734994350156] * 1 + [0.16801026142777753] * 1 + [0.17010820066138732] * 1 + [0.1770417190969021] * 1 + [0.17898793052964337] * 1,
                                       OutputLevel=INFO)
 energy_in_layers.deposits.Path = "ECalBarrelCells"
 energy_in_layers.particle.Path = "GenParticles"

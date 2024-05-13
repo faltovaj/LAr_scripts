@@ -314,7 +314,7 @@ geantsim = SimG4Alg("SimG4Alg",
 # EM scale calibration (sampling fraction)
 # - ECAL barrel
 calibEcalBarrel = CalibrateInLayersTool("CalibrateECalBarrel",
-                                        samplingFraction=[0.3775596654349802] * 1 + [0.13400227700041234] * 1 + [0.14390509963164044] * 1 + [0.14998482026270935] * 1 + [0.15457673722531148] * 1 + [0.15928098152159675] * 1 + [0.1635367867767212] * 1 + [0.16801070646031507] * 1 + [0.1713409944779989] * 1 + [0.17580195406064622] * 1 + [0.17966699467772812] * 1,
+                                        samplingFraction=[0.3816106371465399] * 1 + [0.13606027272993534] * 1 + [0.14440377278980568] * 1 + [0.1498462792215245] * 1 + [0.15488829608278676] * 1 + [0.1592259999853961] * 1 + [0.1642734994350156] * 1 + [0.16801026142777753] * 1 + [0.17010820066138732] * 1 + [0.1770417190969021] * 1 + [0.17898793052964337] * 1,
                                         readoutName=ecalBarrelReadoutName,
                                         layerFieldName="layer")
 
@@ -515,7 +515,7 @@ createemptycells.cells.Path = "emptyCaloCells"
 # Produce sliding window clusters
 if doSWClustering:
     towers = CaloTowerToolFCCee("towers",
-                                deltaThetaTower=4 * 0.009817477 / 4, deltaPhiTower=2 * 2 * pi / 1536.,
+                                deltaThetaTower=4 * 0.009817477/4, deltaPhiTower=2 * 2 * pi / 1536.,
                                 ecalBarrelReadoutName=ecalBarrelReadoutName,
                                 ecalEndcapReadoutName=ecalEndcapReadoutName,
                                 ecalFwdReadoutName="",
@@ -567,11 +567,11 @@ if doSWClustering:
                                                   lastLayerIDs=[10],
                                                   readoutNames=[ecalBarrelReadoutName],
                                                   # do not split the following line or it will break scripts that update the values of the corrections
-                                                  upstreamParameters = [[0.025582045561310333, -0.9524128168665387, -53.10089405478649, 1.283851527438571, -295.30650178662637, -284.8945817377308]],
+                                                  upstreamParameters = [[0.022775705778219288, -0.7525063752395974, -48.67884223533769, 0.3862998862969207, -0.13727296699079825, -0.3648970317703315]],
                                                   upstreamFormulas=[
                                                       ['[0]+[1]/(x-[2])', '[0]+[1]/(x-[2])']],
                                                   # do not split the following line or it will break scripts that update the values of the corrections
-                                                  downstreamParameters = [[0.0018280333929494054, 0.004932212590963076, 0.8409676097173655, -1.2676690014715288, 0.005347798049886769, 4.161741293789687]],
+                                                  downstreamParameters = [[0.0002237339133698106, 0.004978700761692985, 0.8282597379005927, -0.9897023698665659, 0.12763396439744173, 1.2220228075555268]],
                                                   downstreamFormulas=[
                                                       ['[0]+[1]*x', '[0]+[1]/sqrt(x)', '[0]+[1]/x']],
                                                   OutputLevel=INFO
@@ -688,10 +688,10 @@ if doTopoClustering:
             lastLayerIDs=[10],
             readoutNames=[ecalBarrelReadoutName],
             # do not split the following line or it will break scripts that update the values of the corrections
-            upstreamParameters = [[0.025582045561310333, -0.9524128168665387, -53.10089405478649, 1.283851527438571, -295.30650178662637, -284.8945817377308]],
+            upstreamParameters = [[0.022775705778219288, -0.7525063752395974, -48.67884223533769, 0.3862998862969207, -0.13727296699079825, -0.3648970317703315]],
             upstreamFormulas=[['[0]+[1]/(x-[2])', '[0]+[1]/(x-[2])']],
             # do not split the following line or it will break scripts that update the values of the corrections
-            downstreamParameters = [[0.0018280333929494054, 0.004932212590963076, 0.8409676097173655, -1.2676690014715288, 0.005347798049886769, 4.161741293789687]],
+            downstreamParameters = [[0.0002237339133698106, 0.004978700761692985, 0.8282597379005927, -0.9897023698665659, 0.12763396439744173, 1.2220228075555268]],
             downstreamFormulas=[['[0]+[1]*x', '[0]+[1]/sqrt(x)', '[0]+[1]/x']],
             OutputLevel=INFO
         )

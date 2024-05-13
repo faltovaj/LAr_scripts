@@ -316,13 +316,13 @@ from Configurables import CorrectCaloClusters
 correctCaloClusters = CorrectCaloClusters("correctCaloClusters",
                                           inClusters = createClusters.clusters.Path,
                                           outClusters = "Corrected"+createClusters.clusters.Path,
-                                          numLayers = [12],
+                                          numLayers=[11],
                                           firstLayerIDs = [0],
-                                          lastLayerIDs = [11],
+                                          lastLayerIDs=[10],
                                           readoutNames = [ecalBarrelReadoutNamePhiEta],
-                                          upstreamParameters = [[0.033955208567442975, -3.818122686176795, -146.59497297249345, 0.563447903447204, -3.7906629536351906, -8.569962044554627]],
+                                          upstreamParameters = [[0.022775705778219288, -0.7525063752395974, -48.67884223533769, 0.3862998862969207, -0.13727296699079825, -0.3648970317703315]],
                                           upstreamFormulas = [['[0]+[1]/(x-[2])', '[0]+[1]/(x-[2])']],
-                                          downstreamParameters = [[-0.00357017357914002, 0.006624434345822984, 1.0065650241358008, -1.285181650875406, -0.0707783194915608, 12.907319280196257]],
+                                          downstreamParameters = [[0.0002237339133698106, 0.004978700761692985, 0.8282597379005927, -0.9897023698665659, 0.12763396439744173, 1.2220228075555268]],
                                           downstreamFormulas = [['[0]+[1]*x', '[0]+[1]/sqrt(x)', '[0]+[1]/x']],
                                           OutputLevel = INFO
                                           )

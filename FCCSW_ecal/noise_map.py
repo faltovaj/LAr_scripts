@@ -34,7 +34,7 @@ ECalNoiseTool = ReadNoiseFromFileTool("ReadNoiseFromFileToolECal",
                                       setNoiseOffset = False,
                                       activeFieldName = "layer",
                                       addPileup = False,
-                                      numRadialLayers = 12,
+                                      numRadialLayers = 11,
                                       scaleFactor = 1/1000., #MeV to GeV
                                       OutputLevel=DEBUG)
 
@@ -45,7 +45,7 @@ HCalNoiseTool = ReadNoiseFromFileTool("ReadNoiseFromFileToolHCal",
                                       setNoiseOffset = False,
                                       activeFieldName = "layer",
                                       addPileup = False,
-                                      numRadialLayers = 12,
+                                      numRadialLayers = 11,
                                       scaleFactor = 1/1000., #MeV to GeV
                                       OutputLevel=DEBUG)
 
@@ -57,7 +57,7 @@ noisePerCell = CreateFCChhCaloNoiseLevelMap("noisePerCell",
                                             systemNamesPhiEta=["system"],
                                             systemValuesPhiEta=[4],
                                             activeFieldNamesPhiEta=["layer"],
-                                            activeVolumesNumbers = [12],
+                                            activeVolumesNumbers = [11],
                                             #activeVolumesEta = [1.2524, 1.2234, 1.1956, 1.1561, 1.1189, 1.0839, 1.0509, 0.9999, 0.9534, 0.91072],
                                             readoutNamesVolumes=[],
                                             outputFileName="cellNoise_map_electronicsNoiseLevel.root",
